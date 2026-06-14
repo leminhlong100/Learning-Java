@@ -1,0 +1,7 @@
+# Cấu hình build cho Netlify — tự build MkDocs khi push lên GitHub
+[build]
+  command = "pip install -r requirements.txt && mkdocs build"
+  publish = "site"
+
+[build.environment]
+  PYTHON_VERSION = "3.12"
