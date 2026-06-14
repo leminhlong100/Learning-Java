@@ -391,3 +391,45 @@ code {
   .lp-hero { padding: 2.3rem 1.2rem; }
   .lp-sub { font-size: 1rem; }
 }
+
+/* ===========================================================
+   SIDEBAR kiểu khóa học (FB-style: icon + nhóm thu/mở)
+   =========================================================== */
+.md-nav--primary { font-size: .78rem; }
+.md-nav--primary .md-nav__link {
+  border-radius: 9px;
+  padding: .45rem .6rem;
+  margin: 2px .3rem;
+  line-height: 1.35;
+  transition: background .15s, color .15s;
+}
+.md-nav--primary .md-nav__link:hover {
+  background: color-mix(in srgb, var(--md-accent-fg-color) 16%, transparent);
+  color: var(--md-accent-fg-color);
+}
+.md-nav--primary .md-nav__link--active,
+.md-nav--primary .md-nav__item--active > .md-nav__link {
+  background: color-mix(in srgb, var(--md-primary-fg-color) 13%, transparent);
+  font-weight: 700;
+}
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__link--active,
+[data-md-color-scheme="slate"] .md-nav--primary .md-nav__item--active > .md-nav__link {
+  background: rgba(255,255,255,.08);
+}
+
+/* Tên khóa học (nhóm cha) nổi bật như tiêu đề mục */
+.md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link {
+  font-weight: 800;
+  font-size: .9rem;
+  margin-top: .5rem;
+  letter-spacing: .2px;
+}
+/* Đường kẻ mảnh phân tách giữa các khóa học */
+.md-nav--primary > .md-nav__list > .md-nav__item--nested {
+  border-top: 1px solid var(--border);
+  margin-top: .35rem; padding-top: .15rem;
+}
+.md-nav--primary > .md-nav__list > .md-nav__item--nested:first-of-type { border-top: 0; }
+
+/* Bài học con thụt vào + chữ nhỏ hơn chút */
+.md-nav--primary .md-nav__item .md-nav__item .md-nav__link { font-size: .77rem; }

@@ -9,7 +9,6 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.top
-    - navigation.sections
     - toc.integrate
     - search.suggest
     - search.highlight
@@ -42,6 +41,7 @@ markdown_extensions:
   - md_in_html
   - attr_list
   - tables
+  - admonition
   - toc:
       permalink: true
 
@@ -52,16 +52,21 @@ plugins:
         - en
 
 nav:
-  - Trang chủ: index.md
-  - Tuần 1 · OOP + Generics + Collections: weeks/tuan-01.md
-  - Tuần 2 · Exception + Collections: weeks/tuan-02.md
-  - Tuần 3 · Stream + Concurrency: weeks/tuan-03.md
-  - Tuần 4 · Spring Boot + REST API: weeks/tuan-04.md
-  - Tuần 5 · JPA + Spring AI Setup: weeks/tuan-05.md
-  - Tuần 6 · Spring AI + Chatbot Streaming: weeks/tuan-06.md
-  - Tuần 7 · JWT/Security + JUnit + RAG: weeks/tuan-07.md
-  - Tuần 8 · Ôn tập Spaced Review: weeks/tuan-08.md
-  - Tuần 9 · Microservices + Docker: weeks/tuan-09.md
-  - Tuần 10 · JVM + Design Patterns: weeks/tuan-10.md
-  - Tuần 11 · LeetCode + System Design: weeks/tuan-11.md
-  - Tuần 12 · Tổng ôn + Nộp đơn: weeks/tuan-12.md
+  - "🏠 Trang chủ": index.md
+  - "☕ Java Backend":
+      - "📗 Tuần 1 · OOP + Generics": weeks/tuan-01.md
+      - "📘 Tuần 2 · Exception + Collections": weeks/tuan-02.md
+      - "📙 Tuần 3 · Stream + Concurrency": weeks/tuan-03.md
+      - "🌱 Tuần 4 · Spring Boot + REST": weeks/tuan-04.md
+      - "🚀 Tuần 5 · JPA + Spring AI": weeks/tuan-05.md
+      - "💬 Tuần 6 · Spring AI Chatbot": weeks/tuan-06.md
+      - "🔐 Tuần 7 · Security + JUnit + RAG": weeks/tuan-07.md
+      - "🔄 Tuần 8 · Ôn tập tổng hợp": weeks/tuan-08.md
+      - "🏗️ Tuần 9 · Microservices + Docker": weeks/tuan-09.md
+      - "⚙️ Tuần 10 · JVM + Design Patterns": weeks/tuan-10.md
+      - "🧩 Tuần 11 · LeetCode + System Design": weeks/tuan-11.md
+      - "🎓 Tuần 12 · Tổng ôn + Nộp đơn": weeks/tuan-12.md
+  - "🗣️ Tiếng Anh TOEIC":
+      - "📝 Giới thiệu (sắp ra mắt)": courses/toeic/index.md
+  - "💬 Tiếng Anh Giao tiếp":
+      - "📝 Giới thiệu (sắp ra mắt)": courses/giao-tiep/index.md
