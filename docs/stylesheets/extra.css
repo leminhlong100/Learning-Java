@@ -417,6 +417,15 @@ code {
   background: rgba(255,255,255,.08);
 }
 
+/* Ẩn tên site lặp lại ở đầu sidebar */
+.md-nav--primary > .md-nav__title { display: none; }
+
+/* "Trang chủ" (mục top-level đơn) to & nổi bật nhất */
+.md-nav--primary > .md-nav__list > .md-nav__item:not(.md-nav__item--nested) > .md-nav__link {
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
 /* Tên khóa học (nhóm cha) nổi bật như tiêu đề mục */
 .md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link {
   font-weight: 800;
