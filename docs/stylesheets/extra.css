@@ -37,12 +37,44 @@
   --c-en-border:#2471A3;
 }
 
-/* Cho khối nội dung rộng hơn một chút */
-.md-grid { max-width: 1100px; }
+/* ── LAYOUT: dùng nhiều chiều rộng màn hình hơn (hết bị dồn giữa) ── */
+.md-grid { max-width: 1440px; }
+.md-content { max-width: none; }
+.md-content__inner { margin: 0 .8rem 1.2rem; }
+
+/* ── HEADER thương hiệu: gradient tươi như bản gốc ── */
+.md-header, .md-tabs {
+  background: linear-gradient(120deg, #1A1A2E 0%, #0F3460 55%, #148F77 130%);
+  box-shadow: 0 2px 12px rgba(0,0,0,.25);
+}
+:root { --md-accent-fg-color: #148F77; }
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #0F3460;
+  --md-accent-fg-color: #148F77;
+  --md-typeset-a-color: #0F3460;
+}
 
 code {
   font-family: 'Cascadia Code','Fira Code','Consolas','Monaco',monospace;
 }
+
+/* ── BẢNG responsive: cuộn ngang trên mobile, KHÔNG cắt mất cột ── */
+.md-content table { display: block; overflow-x: auto; max-width: 100%; -webkit-overflow-scrolling: touch; }
+.overview-table th, .overview-table td { white-space: nowrap; }
+.overview-table th:last-child, .overview-table td:last-child { white-space: normal; min-width: 220px; }
+
+/* ── Cỡ chữ nội dung to & dễ đọc hơn ── */
+.md-typeset { font-size: .82rem; }
+.en-content      { font-size: .95rem; }
+.theory-body     { font-size: .9rem; }
+.exercise-list li{ font-size: .95rem; }
+.qa-q            { font-size: .95rem; }
+.qa-answer       { font-size: .92rem; }
+.overview-table  { font-size: .92rem; }
+.check-item      { font-size: .95rem; }
+.sq-item         { font-size: .9rem; }
+.bottom-card     { font-size: .9rem; }
+.code-wrap pre   { font-size: .86rem; }
 
 /* ── WEEK DIVIDER (banner tiêu đề tuần) ── */
 .week-divider {
@@ -236,10 +268,15 @@ code {
 [data-md-color-scheme="slate"] .golden-rule { background: rgba(243,156,18,.08); }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .theory-grid { grid-template-columns: 1fr; }
   .bottom-row { grid-template-columns: 1fr; }
   .summary-cols { grid-template-columns: 1fr; }
-  .day-header { flex-direction: column; }
+  .day-header { flex-direction: column; align-items: flex-start; }
   .day-meta { align-items: flex-start; }
+  .day-body { padding: 1rem .85rem; }
+  #overview, [id$="-overview"] { padding: 1rem .85rem; }
+  .week-divider { font-size: .95rem; padding: .8rem 1rem; }
+  .en-badge-time { margin-left: 0; }
+  .en-header { gap: .4rem; }
 }

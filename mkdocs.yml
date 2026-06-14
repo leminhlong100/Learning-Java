@@ -10,20 +10,19 @@ theme:
     - navigation.tracking
     - navigation.top
     - navigation.sections
-    - toc.follow
+    - toc.integrate
     - search.suggest
     - search.highlight
     - content.code.copy
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
+    # Mặc định: nền SÁNG (tươi, dễ học) — có nút chuyển sang tối
+    - scheme: default
       primary: indigo
       accent: teal
       toggle:
         icon: material/weather-night
         name: Chuyển sang nền tối
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
+    - scheme: slate
       primary: indigo
       accent: teal
       toggle:
