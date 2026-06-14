@@ -6,6 +6,26 @@
    Theme / nav / scroll-top do MkDocs Material lo sẵn.
    =========================================================== */
 function initLearningWidgets() {
+  // ── SYNTAX HIGHLIGHT (tô màu code giống VS Code) ──
+  if (window.hljs) {
+    const langMap = {
+      java: 'java', yaml: 'yaml', yml: 'yaml',
+      bash: 'bash', sh: 'bash', shell: 'bash',
+      docker: 'dockerfile', dockerfile: 'dockerfile',
+      text: 'plaintext', json: 'json', sql: 'sql', xml: 'xml'
+    };
+    document.querySelectorAll('.code-wrap pre code').forEach(el => {
+      if (el.dataset.hl) return;
+      if (![...el.classList].some(c => c.startsWith('language-'))) {
+        for (const c of el.classList) {
+          if (langMap[c]) { el.classList.add('language-' + langMap[c]); break; }
+        }
+      }
+      try { window.hljs.highlightElement(el); } catch (e) { /* bỏ qua nếu lỗi */ }
+      el.dataset.hl = '1';
+    });
+  }
+
   // ── COPY CODE ──
   document.querySelectorAll('.copy-btn').forEach(btn => {
     if (btn.dataset.bound) return;

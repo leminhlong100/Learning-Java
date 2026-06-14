@@ -21,7 +21,7 @@
   --text:      #1a1a2e;
   --text-muted:#6C757D;
   --border:    #DEE2E6;
-  --code-bg:   #0d1117;
+  --code-bg:   #1e1e1e;
   --code-text: #e6edf3;
   --shadow:    0 2px 8px rgba(0,0,0,.08);
   --radius:    10px;
@@ -180,7 +180,8 @@ code {
   font-family: 'Cascadia Code','Fira Code','Consolas',monospace;
   font-size: .8rem; line-height: 1.6; tab-size: 4;
 }
-.code-wrap pre code { background: none; color: inherit; padding: 0; }
+.code-wrap pre code,
+.code-wrap pre code.hljs { background: none; color: inherit; padding: 0; }
 .copy-btn {
   position: absolute; top: .6rem; right: .6rem;
   background: rgba(255,255,255,.1); color: #cdd9e5;
